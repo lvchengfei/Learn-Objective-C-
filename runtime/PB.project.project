@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>PB.project</title>
+<style type="text/css">
+.enscript-comment { font-style: italic; color: rgb(178,34,34); }
+.enscript-function-name { font-weight: bold; color: rgb(0,0,255); }
+.enscript-variable-name { font-weight: bold; color: rgb(184,134,11); }
+.enscript-keyword { font-weight: bold; color: rgb(160,32,240); }
+.enscript-reference { font-weight: bold; color: rgb(95,158,160); }
+.enscript-string { font-weight: bold; color: rgb(188,143,143); }
+.enscript-builtin { font-weight: bold; color: rgb(218,112,214); }
+.enscript-type { font-weight: bold; color: rgb(34,139,34); }
+.enscript-highlight { text-decoration: underline; color: 0; }
+</style>
+</head>
+<body id="top">
+<h1 style="margin:8px;" id="f1">PB.project&nbsp;&nbsp;&nbsp;<span style="font-weight: normal; font-size: 0.5em;">[<a href="?txt">plain text</a>]</span></h1>
+<hr/>
+<div></div>
+<pre>
+{
+    CURRENTLY_ACTIVE_VERSION = YES; 
+    DEPLOY_WITH_VERSION_NAME = A; 
+    DYNAMIC_CODE_GEN = YES; 
+    FILESTABLE = {
+        CLASSES = (); 
+        HEADERSEARCH = (); 
+        H_FILES = (
+            error.h, 
+            hashtable2.h, 
+            maptable.h, 
+            &quot;objc-api.h&quot;, 
+            &quot;objc-class.h&quot;, 
+            &quot;objc-config.h&quot;, 
+            &quot;objc-load.h&quot;, 
+            &quot;objc-private.h&quot;, 
+            &quot;objc-runtime.h&quot;, 
+            objc.h, 
+            Object.h, 
+            Protocol.h
+        ); 
+        OTHER_LINKED = (
+            hashtable2.m, 
+            maptable.m, 
+            &quot;objc-class.m&quot;, 
+            &quot;objc-errors.m&quot;, 
+            &quot;objc-file.m&quot;, 
+            &quot;objc-load.m&quot;, 
+            &quot;objc-moninit.c&quot;, 
+            &quot;objc-runtime.m&quot;, 
+            &quot;objc-sel.m&quot;, 
+            Object.m, 
+            Protocol.m
+        ); 
+        OTHER_SOURCES = (
+            Makefile.preamble, 
+            Makefile, 
+            Makefile.postamble, 
+            objc_hpux_register_shlib.c, 
+            objc_dllMain.c
+        ); 
+        PUBLIC_HEADERS = (
+            &quot;objc-class.h&quot;, 
+            &quot;objc-api.h&quot;, 
+            &quot;objc-load.h&quot;, 
+            &quot;objc-runtime.h&quot;, 
+            objc.h, 
+            Object.h, 
+            Protocol.h, 
+            error.h, 
+            hashtable2.h
+        ); 
+        SUBPROJECTS = (Messengers.subproj, OldClasses.subproj); 
+    }; 
+    LANGUAGE = English; 
+    LOCALIZABLE_FILES = {}; 
+    MAKEFILEDIR = &quot;$(MAKEFILEPATH)/pb_makefiles&quot;; 
+    NEXTSTEP_BUILDTOOL = /bin/gnumake; 
+    NEXTSTEP_INSTALLDIR = /usr/lib; 
+    NEXTSTEP_JAVA_COMPILER = /usr/bin/javac; 
+    NEXTSTEP_OBJCPLUS_COMPILER = /usr/bin/cc; 
+    PDO_UNIX_BUILDTOOL = $NEXT_ROOT/Developer/bin/make; 
+    PDO_UNIX_INSTALLDIR = &quot;$(LOCAL_DEVELOPER_DIR)/Libraries&quot;; 
+    PDO_UNIX_JAVA_COMPILER = &quot;$(NEXTDEV_BIN)/javac&quot;; 
+    PDO_UNIX_OBJCPLUS_COMPILER = &quot;$(NEXTDEV_BIN)/gcc&quot;; 
+    PROJECTNAME = runtime; 
+    PROJECTTYPE = Library; 
+    PROJECTVERSION = 2.8; 
+    WINDOWS_BUILDTOOL = $NEXT_ROOT/Developer/Executables/make; 
+    WINDOWS_INSTALLDIR = /.; 
+    WINDOWS_JAVA_COMPILER = &quot;$(JDKBINDIR)/javac.exe&quot;; 
+    WINDOWS_OBJCPLUS_COMPILER = &quot;$(DEVDIR)/gcc&quot;; 
+}
+</pre>
+<hr />
+</body></html>

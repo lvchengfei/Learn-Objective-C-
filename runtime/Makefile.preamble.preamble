@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Makefile.preamble</title>
+<style type="text/css">
+.enscript-comment { font-style: italic; color: rgb(178,34,34); }
+.enscript-function-name { font-weight: bold; color: rgb(0,0,255); }
+.enscript-variable-name { font-weight: bold; color: rgb(184,134,11); }
+.enscript-keyword { font-weight: bold; color: rgb(160,32,240); }
+.enscript-reference { font-weight: bold; color: rgb(95,158,160); }
+.enscript-string { font-weight: bold; color: rgb(188,143,143); }
+.enscript-builtin { font-weight: bold; color: rgb(218,112,214); }
+.enscript-type { font-weight: bold; color: rgb(34,139,34); }
+.enscript-highlight { text-decoration: underline; color: 0; }
+</style>
+</head>
+<body id="top">
+<h1 style="margin:8px;" id="f1">Makefile.preamble&nbsp;&nbsp;&nbsp;<span style="font-weight: normal; font-size: 0.5em;">[<a href="?txt">plain text</a>]</span></h1>
+<hr/>
+<div></div>
+<pre>
+<span class="enscript-comment">###############################################################################
+</span><span class="enscript-comment">#  Makefile.preamble
+</span><span class="enscript-comment">#  Copyright 1997,2000 Apple Computer, Inc.
+</span><span class="enscript-comment">###############################################################################
+</span>
+ifeq <span class="enscript-string">&quot;$(PLATFORM_OS)&quot;</span> <span class="enscript-string">&quot;winnt&quot;</span>
+	BUILDING_ON_WINDOWS = YES
+else
+ifeq <span class="enscript-string">&quot;$(PLATFORM_OS)&quot;</span> <span class="enscript-string">&quot;win95&quot;</span>
+	BUILDING_ON_WINDOWS = YES
+else
+ifeq <span class="enscript-string">&quot;$(PLATFORM_OS)&quot;</span> <span class="enscript-string">&quot;win32&quot;</span>
+	BUILDING_ON_WINDOWS = YES
+endif <span class="enscript-comment"># win32
+</span>endif <span class="enscript-comment"># win95
+</span>endif <span class="enscript-comment"># winnt
+</span>
+ifeq <span class="enscript-string">&quot;$(PLATFORM_OS)&quot;</span> <span class="enscript-string">&quot;macos&quot;</span>
+	NAME = objc
+	OTHER_CFLAGS += -Wno-unused
+	OTHER_LIBTOOL_FLAGS += -Wl,-init,___initialize_objc
+	FRAMEWORKS += -framework CoreFoundation
+	HEADER_PATHS += -I$(<span class="enscript-reference">NEXT_ROOT</span>)$(<span class="enscript-reference">SYSTEM_LIBRARY_DIR</span>)/Frameworks/System.framework/PrivateHeaders
+	AFTER_INSTALL += create-profile-lib-compat-link
+endif
+ifeq <span class="enscript-string">&quot;$(BUILDING_ON_WINDOWS)&quot;</span> <span class="enscript-string">&quot;YES&quot;</span>
+	LIBRARY_STYLE = STATIC
+	OTHER_LIBTOOL_FLAGS = -debugtype:both
+endif
+ifeq <span class="enscript-string">&quot;$(PLATFORM_OS)&quot;</span> <span class="enscript-string">&quot;solaris&quot;</span>
+	OTHER_CFLAGS += -Wno-unused -fPIC
+	LIBRARY_STYLE = STATIC
+endif
+ifeq <span class="enscript-string">&quot;$(PLATFORM_OS)&quot;</span> <span class="enscript-string">&quot;hpux&quot;</span>
+	OTHER_CFLAGS += -Wno-unused -Wno-comment -D_REENTRANT -DNSBUILDINGHPUXSHLIB -fPIC
+	LIBRARY_STYLE = STATIC
+endif
+
+OTHER_CFLAGS += -DNSBUILDINGOBJC -I$(<span class="enscript-reference">SYMROOT</span>)
+OTHER_LDFLAGS =
+
+AFTER_INSTALLHDRS += link-hashtable
+AFTER_POSTINSTALL += postprocess
+
+ifeq (<span class="enscript-string">&quot;$(PLATFORM_OS)&quot;</span>, <span class="enscript-string">&quot;macos&quot;</span>)
+	PUBLIC_HEADER_DIR = /usr/include
+	PRIVATE_HEADER_DIR = /usr/local/include
+else
+ifeq (<span class="enscript-string">&quot;$(PLATFORM_OS)&quot;</span>, <span class="enscript-string">&quot;solaris&quot;</span>)
+	PUBLIC_HEADER_DIR = $(<span class="enscript-reference">SYSTEM_LIBRARY_DIR</span>)/Frameworks/System.framework/Versions/A/Headers
+	PRIVATE_HEADER_DIR = $(<span class="enscript-reference">SYSTEM_LIBRARY_DIR</span>)/Frameworks/System.framework/Versions/A/PrivateHeaders
+else
+ifeq (<span class="enscript-string">&quot;$(PLATFORM_OS)&quot;</span>, <span class="enscript-string">&quot;hpux&quot;</span>)
+	PUBLIC_HEADER_DIR = $(<span class="enscript-reference">SYSTEM_LIBRARY_DIR</span>)/Frameworks/System.framework/Versions/A/Headers
+	PRIVATE_HEADER_DIR = $(<span class="enscript-reference">SYSTEM_LIBRARY_DIR</span>)/Frameworks/System.framework/Versions/A/PrivateHeaders
+else
+	PUBLIC_HEADER_DIR = $(<span class="enscript-reference">SYSTEM_DEVELOPER_DIR</span>)/Headers
+	PRIVATE_HEADER_DIR = $(<span class="enscript-reference">LOCAL_DEVELOPER_DIR</span>)/Headers
+endif
+endif
+endif
+
+<span class="enscript-comment"># If, in a subproject, you want to append to the parent's PUBLIC_HEADER_DIR# 
+</span><span class="enscript-comment"># (say, to add a subdirectory like &quot;/sys&quot;), you can use:
+</span>PUBLIC_HEADER_DIR_SUFFIX = /objc
+PRIVATE_HEADER_DIR_SUFFIX = /objc
+
+OTHER_PUBLIC_HEADERS = 
+OTHER_PRIVATE_HEADERS = maptable.h 
+OTHER_PROJECT_HEADERS = $(<span class="enscript-reference">PUBLIC_HEADERS</span>) $(<span class="enscript-reference">OTHER_PRIVATE_HEADERS</span>) objc-private.h objc-config.h
+
+</pre>
+<hr />
+</body></html>

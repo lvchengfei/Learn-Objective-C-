@@ -1,0 +1,129 @@
+1,如何保存shsh？
+必要条件，保存有低版本的shsh，比如4.0.2降级到4.0.1 需要4.0.1的shsh，打开tinyumbrella（小雨伞），然后连接设备，确认连接上后，选择save shsh既可。
+windows下C:\Users\用户名\.shsh\    
+mac下/users/用户名/.shsh/ 
+http://bbs.weiphone.com/read-htm-tid-912818.html
+2.如何降级？
+打开tinyumbrella（小雨伞），连接设备，选中对应的要恢复的系统版本，点击start servers,此时变为stop servers，不要动它。再打开itunes，连上设备后，按shift(win) ,或option（mac）同时点击恢复，出现选择固件的文件框，选择对应的固件既可。注意此时选择的固件版本应和tinyumbrella（小雨伞）选择的系统版本一致。然后按提示操作既可。
+http://iphone.sj.91.com/content/2011-03-16/20110316015215297,2.shtml
+http://ipad.sj.91.com/content/2011-03-17/20110317222322535,1.shtml
+4。如何越狱？
+简单方式，可以上网，直接在safari中输入www.hailbreakme.com 既可。
+如果恢复完成后，停留在紧急呼叫模式，可以使用对应的sim卡激活，如果不能激活（针对国外），则可以直接越狱，比如4.0.1可以使用“绿雨“直接越狱。方法很简单，见
+http://iphone.tgbus.com/tutorial/hacktutorial/201010/20101010104002.shtml
+5。各版本可以使用的越狱方法汇总
+
+http://bbs.tongbu.com/archiver/showtopic-2614.aspx
+http://www.bhclub.net/bbs/archiver/?tid-12.html
+iOS全系列机型越狱教程
+
+iPhone 越狱 
+iPad/iPod Touch 越狱 
+
+iPhone 4
+[4.1 固件]
+[方法一：绿雨][方法二：绿毒]
+[4.0.2 固件][方法一：绿雨]
+[4.0.1/4.0.0 固件]
+[方法一：JailbreakMe][方法二：绿雨]
+  
+iPad WiFi/3G+WiFi
+[3.2.2固件][方法一：绿毒]
+[3.2.1/3.2固件][方法一：绿毒]
+
+
+iPhone 3GS
+[4.1 固件]
+[方法一：绿雨][方法二：绿毒]
+[4.0.2 固件][方法一：绿雨]
+[4.0.1/4.0.0 固件]
+[方法一：JailbreakMe][方法二：绿雨]
+[3.1.3固件][方法一：Spirit]
+[方法二：JailbreakMe]
+[3.1.3固件]
+[方法一：Spirit]
+[方法二：JailbreakMe]
+[3.1.0/3.0.1/3.0.0固件]
+[方法一：红雪]
+[方法二：黑雨]
+  
+iPod Touch 4G
+[4.1固件]
+[方法一：绿雨]
+[方法二：绿毒]
+
+
+iPhone 3G
+[4.1 固件]
+[方法一：红雪]
+[4.0.2 固件]
+[方法一：红雪]
+[4.0.1/4.0.0固件]
+[方法一：JailbreakMe]
+[方法二：红雪]
+[3.1.3固件]
+[方法一：Spirit][方法二：JailbreakMe]
+[3.1.2固件]
+[方法一：Spirit][方法二：JailbreakMe]
+[3.1.0/3.0.1/3.0.0固件]
+[方法一：红雪][方法二：黑雨]
+[2.x固件]
+[方法一：红雪][方法二：黑雨]
+  
+iPod Touch 3G
+[4.1固件]
+[方法一：绿雨]
+[方法二：绿毒]
+[4.0.0固件]
+[方法一：JailbreakMe]
+[3.1.3/3.1.2固件]
+[方法一：JailbreakMe][方法二：Spirit]
+[3.1.1固件]
+[方法一：黑雨]
+
+
+iPhone 2G
+[3.1.3固件]
+[方法一：红雪]
+[3.1.2固件]
+[方法一：红雪]
+[3.1.0/3.0.1/3.0.0固件]
+[方法一：红雪]
+[2.2.1固件]
+[方法一：QuickPwn ]
+[2.2.0固件]
+[方法一：QuickPwn ]
+[2.1.0固件]
+[方法一：QuickPwn ]
+[2.0.2/2.0.1/2.0.0固件]
+[方法一：QuickPwnRC3 ]
+[1.1.4固件]
+[方法一：Weplus2.1 ]
+  
+iPod Touch 2G
+[4.1固件]
+[方法一：绿毒]
+[4.0.0固件]
+[方法一：JailbreakMe]
+[3.1.3/3.1.2固件]
+[方法一：JailbreakMe][方法二：Spirit]
+[3.0.0固件]
+[方法一：黑雨]
+[2.x固件]
+[方法一：黑雨]
+
+
+
+  
+iPod Touch 1G
+[3.1.3/3.1.2固件]
+[方法一：JailbreakMe][方法二：Spirit]
+[3.0.0固件]
+[方法一：黑雨]
+[2.x固件]
+[方法一：黑雨]
+[1.x固件]
+[方法一：黑雨] 
+
+6,固件下载大全
+http://techpp.com/2010/08/09/guide-jailbreak-iphone-ipod-touch-ipad-download-all-firmware-versions/
